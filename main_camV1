@@ -68,6 +68,12 @@ void handleCapture() {
         server.send(500, "text/plain", "Capture failed");
         return;
     }
+    Serial.printf(
+    "JPEG=%u bytes | Heap=%u | RSSI=%d\n",
+    fb->len,
+    ESP.getFreeHeap(),
+    WiFi.RSSI()
+);
 
     WiFiClient client = server.client();
 
@@ -116,8 +122,8 @@ void setup() {
     config.pixel_format = PIXFORMAT_JPEG;
 
     // ไม่มี PSRAM
-    config.frame_size = FRAMESIZE_QVGA;
-    config.jpeg_quality = 15;
+    config.frame_size = FRAMESIZE_SVGA;
+    config.jpeg_quality = 10;
     config.fb_count = 1;
     config.fb_location = CAMERA_FB_IN_DRAM;
     config.grab_mode = CAMERA_GRAB_WHEN_EMPTY;
