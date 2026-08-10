@@ -1,0 +1,16 @@
+#include <Arduino.h>
+
+#define RX2_PIN 16 // ต่อเข้า TXD ของ A7670E
+#define TX2_PIN 17 // ต่อเข้า RXD ของ A7670E
+
+void setup() {
+  Serial.begin(115200);
+  Serial2.begin(115200, SERIAL_8N1, RX2_PIN, TX2_PIN);
+  
+  Serial.println("\n--- ESP32 Bridge Ready ---");
+}
+
+void loop() {
+  if (Serial.available())   Serial2.write(Serial.read());
+  if (Serial2.available())  Serial.write(Serial2.read());
+}
