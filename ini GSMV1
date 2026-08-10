@@ -1,0 +1,25 @@
+; PlatformIO Project Configuration File
+;
+;   Build options: build flags, source filter
+;   Upload options: custom upload port, speed and extra flags
+;   Library options: dependencies, extra library storages
+;   Advanced options: extra scripting
+;
+; Please visit documentation for the other options and examples
+; https://docs.platformio.org/page/projectconf.html
+
+[env:esp32doit-devkit-v1]
+platform = espressif32
+board = esp32doit-devkit-v1
+framework = arduino
+ 
+ ; ความเร็วของ Serial Monitor ในการแสดงผลบนคอมพิวเตอร์
+monitor_speed = 115200
+
+; ตัวกรองสำหรับจัดการข้อความและคำสั่งส่ง
+monitor_filters = 
+    send_on_enter    ; ส่งคำสั่งเมื่อกด Enter เท่านั้น
+    colorize         ; เปิดการแสดงสีสันบน Terminal
+
+; ตั้งค่ารหัสจบบรรทัดที่ส่งไป (A7670E ต้องการ \r\n หรือ CRLF)
+monitor_eol = CRLF
