@@ -1,0 +1,17 @@
+yolo_env/
+meter_env/
+__pycache__/
+*.pyc
+.git/
+.DS_Store
+train/
+valid/
+elec/
+water/
+gas/
+fakenum/
+thaimeter/
+backup/
+review/
+AI-on-the-edge-device__manual-setup__v16.1.0/
+downloads/

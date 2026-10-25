@@ -1,0 +1,45 @@
+# Environments
+yolo_env/
+meter_env/
+env/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+.DS_Store
+
+# Large datasets & test images
+train/
+valid/
+elec/
+water/
+gas/
+fakenum/
+thaimeter/
+backup/
+review/
+downloads/
+AI-on-the-edge-device__manual-setup__v16.1.0/
+
+# Old versions & temp models
+ocr version old/
+ocr_api.py
+meter_digits.pt
+dig-class100-0182-s2_q.tflite
+data.yaml
+ocr_client_requirements.txt
+ocr_requirements.txt
+README.dataset.txt
+README.roboflow.txt
+
+# Local test files & scratch images (เก็บไว้ในเครื่องเท่านั้น)
+roi_preview.png
+test.py
+test_*.py
+upload_*.py
+*.png
+*.jpg
+
+# Config & secrets (สร้างบน Server เอง)
+.env

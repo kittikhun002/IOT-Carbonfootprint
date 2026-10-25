@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  ocr-worker:
+    build: .
+    container_name: ocr-poller-worker
+    restart: always                  # สั่งให้เปิดตัวเองใหม่เสมอถ้า Server ดับหรือรีบูต
+    env_file:
+      - .env                         # ดึงค่าคอนฟิก URL และรหัสผ่านจาก .env

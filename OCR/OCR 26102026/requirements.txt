@@ -1,0 +1,8 @@
+ultralytics
+opencv-python-headless
+ai-edge-litert
+httpx
+python-dotenv
+pillow
+numpy
+google-generativeai
